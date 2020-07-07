@@ -9,9 +9,11 @@ def talker():
     rate = rospy.Rate(10) # 10hz
     counter = 0
     while not rospy.is_shutdown():
-        hello_str = "hello world %s" % counter
-        rospy.loginfo(hello_str)
-        pub.publish(hello_str)
+        # hello_str = "hello world %s" % counter
+        msg = String()
+        msg.data = "Heeeeellllloooooo"
+        rospy.loginfo(msg)
+        pub.publish(msg)
         rate.sleep()
         counter += 1
 
