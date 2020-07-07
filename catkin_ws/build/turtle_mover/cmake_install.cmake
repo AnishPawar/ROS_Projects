@@ -1,8 +1,8 @@
-# Install script for directory: /home/anish/git/ROS_Projects/catkin_ws/src/turtle_mover
+# Install script for directory: /home/anishpawar/Git/ROS_Projects/catkin_ws/src/turtle_mover
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/anish/git/ROS_Projects/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/anishpawar/Git/ROS_Projects/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/anish/git/ROS_Projects/catkin_ws/build/turtle_mover/catkin_generated/installspace/turtle_mover.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/anishpawar/Git/ROS_Projects/catkin_ws/build/turtle_mover/catkin_generated/installspace/turtle_mover.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtle_mover/cmake" TYPE FILE FILES
-    "/home/anish/git/ROS_Projects/catkin_ws/build/turtle_mover/catkin_generated/installspace/turtle_moverConfig.cmake"
-    "/home/anish/git/ROS_Projects/catkin_ws/build/turtle_mover/catkin_generated/installspace/turtle_moverConfig-version.cmake"
+    "/home/anishpawar/Git/ROS_Projects/catkin_ws/build/turtle_mover/catkin_generated/installspace/turtle_moverConfig.cmake"
+    "/home/anishpawar/Git/ROS_Projects/catkin_ws/build/turtle_mover/catkin_generated/installspace/turtle_moverConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtle_mover" TYPE FILE FILES "/home/anish/git/ROS_Projects/catkin_ws/src/turtle_mover/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtle_mover" TYPE FILE FILES "/home/anishpawar/Git/ROS_Projects/catkin_ws/src/turtle_mover/package.xml")
 endif()
 

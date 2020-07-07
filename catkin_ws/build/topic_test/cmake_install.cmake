@@ -1,8 +1,8 @@
-# Install script for directory: /home/anish/git/ROS_Projects/catkin_ws/src/topic_test
+# Install script for directory: /home/anishpawar/Git/ROS_Projects/catkin_ws/src/topic_test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/anish/git/ROS_Projects/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/anishpawar/Git/ROS_Projects/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/anish/git/ROS_Projects/catkin_ws/build/topic_test/catkin_generated/installspace/topic_test.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/anishpawar/Git/ROS_Projects/catkin_ws/build/topic_test/catkin_generated/installspace/topic_test.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/topic_test/cmake" TYPE FILE FILES
-    "/home/anish/git/ROS_Projects/catkin_ws/build/topic_test/catkin_generated/installspace/topic_testConfig.cmake"
-    "/home/anish/git/ROS_Projects/catkin_ws/build/topic_test/catkin_generated/installspace/topic_testConfig-version.cmake"
+    "/home/anishpawar/Git/ROS_Projects/catkin_ws/build/topic_test/catkin_generated/installspace/topic_testConfig.cmake"
+    "/home/anishpawar/Git/ROS_Projects/catkin_ws/build/topic_test/catkin_generated/installspace/topic_testConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/topic_test" TYPE FILE FILES "/home/anish/git/ROS_Projects/catkin_ws/src/topic_test/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/topic_test" TYPE FILE FILES "/home/anishpawar/Git/ROS_Projects/catkin_ws/src/topic_test/package.xml")
 endif()
 

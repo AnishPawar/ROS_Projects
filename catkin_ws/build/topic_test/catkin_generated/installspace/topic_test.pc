@@ -1,4 +1,4 @@
-prefix=/home/anish/git/ROS_Projects/catkin_ws/install
+prefix=/home/anishpawar/Git/ROS_Projects/catkin_ws/install
 
 Name: topic_test
 Description: Description of topic_test
