@@ -10,6 +10,8 @@ project(topic_test)
 find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
+  std_srvs
+  custom_msgs
 )
 
 ## System dependencies are found with CMake's conventions

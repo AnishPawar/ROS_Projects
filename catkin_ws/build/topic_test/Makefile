@@ -68,6 +68,18 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -77,17 +89,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -100,17 +101,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -168,79 +168,79 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-topic_test/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : topic_test/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+topic_test/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
+	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+.PHONY : topic_test/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_eus: topic_test/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+std_srvs_generate_messages_cpp: topic_test/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
 
-.PHONY : std_msgs_generate_messages_eus
+.PHONY : std_srvs_generate_messages_cpp
 
 # fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f topic_test/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make topic_test/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
+std_srvs_generate_messages_cpp/fast:
+	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f topic_test/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make topic_test/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+.PHONY : std_srvs_generate_messages_cpp/fast
 
 # Convenience name for target.
-topic_test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : topic_test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+topic_test/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
+	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+.PHONY : topic_test/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_cpp: topic_test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+std_srvs_generate_messages_eus: topic_test/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
 
-.PHONY : std_msgs_generate_messages_cpp
+.PHONY : std_srvs_generate_messages_eus
 
 # fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f topic_test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make topic_test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
+std_srvs_generate_messages_eus/fast:
+	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f topic_test/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make topic_test/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+.PHONY : std_srvs_generate_messages_eus/fast
 
 # Convenience name for target.
-topic_test/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : topic_test/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+topic_test/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
+	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+.PHONY : topic_test/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_lisp: topic_test/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+std_srvs_generate_messages_lisp: topic_test/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
-.PHONY : std_msgs_generate_messages_lisp
+.PHONY : std_srvs_generate_messages_lisp
 
 # fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f topic_test/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make topic_test/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
+std_srvs_generate_messages_lisp/fast:
+	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f topic_test/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make topic_test/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+.PHONY : std_srvs_generate_messages_lisp/fast
 
 # Convenience name for target.
-topic_test/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : topic_test/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+topic_test/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
+	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+.PHONY : topic_test/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_nodejs: topic_test/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+std_srvs_generate_messages_py: topic_test/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 
-.PHONY : std_msgs_generate_messages_nodejs
+.PHONY : std_srvs_generate_messages_py
 
 # fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f topic_test/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make topic_test/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
+std_srvs_generate_messages_py/fast:
+	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f topic_test/CMakeFiles/std_srvs_generate_messages_py.dir/build.make topic_test/CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
 
 # Convenience name for target.
-topic_test/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : topic_test/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+topic_test/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
+	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+.PHONY : topic_test/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_py: topic_test/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+std_srvs_generate_messages_nodejs: topic_test/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 
-.PHONY : std_msgs_generate_messages_py
+.PHONY : std_srvs_generate_messages_nodejs
 
 # fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f topic_test/CMakeFiles/std_msgs_generate_messages_py.dir/build.make topic_test/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
+std_srvs_generate_messages_nodejs/fast:
+	cd /home/anishpawar/Git/ROS_Projects/catkin_ws/build && $(MAKE) -f topic_test/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make topic_test/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+.PHONY : std_srvs_generate_messages_nodejs/fast
 
 # Help Target
 help:
@@ -249,15 +249,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... install"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_py"
+	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... std_srvs_generate_messages_cpp"
+	@echo "... std_srvs_generate_messages_eus"
+	@echo "... std_srvs_generate_messages_lisp"
+	@echo "... edit_cache"
+	@echo "... std_srvs_generate_messages_py"
+	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... install/local"
 	@echo "... test"
 .PHONY : help

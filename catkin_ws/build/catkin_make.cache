@@ -1,2 +1,2 @@
-topic_test:turtle_mover
+Robot_Messages:custom_msgs:topic_test:turtle_mover
 -DCATKIN_DEVEL_PREFIX=/home/anishpawar/Git/ROS_Projects/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/anishpawar/Git/ROS_Projects/catkin_ws/install -G Unix Makefiles

@@ -1,0 +1,8 @@
+prefix=/home/anishpawar/Git/ROS_Projects/catkin_ws/install
+
+Name: Robot_Messages
+Description: Description of Robot_Messages
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime
