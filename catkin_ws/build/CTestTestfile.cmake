@@ -5,6 +5,7 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+subdirs("first_bringup")
 subdirs("Robot_Messages")
 subdirs("custom_msgs")
 subdirs("topic_test")

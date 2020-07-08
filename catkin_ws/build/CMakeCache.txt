@@ -299,11 +299,16 @@ cpp_common_DIR:PATH=/opt/ros/melodic/share/cpp_common/cmake
 //Value Computed by CMake
 custom_msgs_BINARY_DIR:STATIC=/home/anishpawar/Git/ROS_Projects/catkin_ws/build/custom_msgs
 
-//The directory containing a CMake configuration file for custom_msgs.
-custom_msgs_DIR:PATH=/home/anishpawar/Git/ROS_Projects/catkin_ws/devel/share/custom_msgs/cmake
+custom_msgs_DIR:PATH=
 
 //Value Computed by CMake
 custom_msgs_SOURCE_DIR:STATIC=/home/anishpawar/Git/ROS_Projects/catkin_ws/src/custom_msgs
+
+//Value Computed by CMake
+first_bringup_BINARY_DIR:STATIC=/home/anishpawar/Git/ROS_Projects/catkin_ws/build/first_bringup
+
+//Value Computed by CMake
+first_bringup_SOURCE_DIR:STATIC=/home/anishpawar/Git/ROS_Projects/catkin_ws/src/first_bringup
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/melodic/share/gencpp/cmake
@@ -410,6 +415,9 @@ std_srv_DIR:PATH=std_srv_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for std_srvs.
 std_srvs_DIR:PATH=/opt/ros/melodic/share/std_srvs/cmake
+
+//The directory containing a CMake configuration file for stdmsgs.
+stdmsgs_DIR:PATH=stdmsgs_DIR-NOTFOUND
 
 //Value Computed by CMake
 topic_test_BINARY_DIR:STATIC=/home/anishpawar/Git/ROS_Projects/catkin_ws/build/topic_test
@@ -536,7 +544,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
