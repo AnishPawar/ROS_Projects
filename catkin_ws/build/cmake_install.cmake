@@ -132,8 +132,10 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/anishpawar/Git/ROS_Projects/catkin_ws/build/gtest/cmake_install.cmake")
   include("/home/anishpawar/Git/ROS_Projects/catkin_ws/build/first_bringup/cmake_install.cmake")
+  include("/home/anishpawar/Git/ROS_Projects/catkin_ws/build/ROS_CPP/cmake_install.cmake")
   include("/home/anishpawar/Git/ROS_Projects/catkin_ws/build/Robot_Messages/cmake_install.cmake")
   include("/home/anishpawar/Git/ROS_Projects/catkin_ws/build/custom_msgs/cmake_install.cmake")
+  include("/home/anishpawar/Git/ROS_Projects/catkin_ws/build/opencv_learning/cmake_install.cmake")
   include("/home/anishpawar/Git/ROS_Projects/catkin_ws/build/topic_test/cmake_install.cmake")
   include("/home/anishpawar/Git/ROS_Projects/catkin_ws/build/turtle_mover/cmake_install.cmake")
 
