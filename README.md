@@ -10,15 +10,15 @@ command : roscore
 ## Topics:
 Nodes communicate on a topic in ros.
 
-rostopic bw     display bandwidth used by topic
-rostopic delay display delay for topic which has header
-rostopic echo   print messages to screen
-rostopic find   find topics by type
-rostopic hz     display publishing rate of topic
-rostopic info   print information about active topic
-rostopic list   print information about active topics
-rostopic pub    publish data to topic
-rostopic type   print topic type
+#### rostopic bw     display bandwidth used by topic
+#### rostopic delay display delay for topic which has header
+#### rostopic echo   print messages to screen
+#### rostopic find   find topics by type
+#### rostopic hz     display publishing rate of topic
+#### rostopic info   print information about active topic
+#### rostopic list   print information about active topics
+#### rostopic pub    publish data to topic
+#### rostopic type   print topic type
 
 Resource: http://wiki.ros.org/rostopic
 
