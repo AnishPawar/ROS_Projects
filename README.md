@@ -29,22 +29,22 @@ Rqt graphs can be used to visualise the nodes, subscribers etc on a given topic.
 They can be considered as the basic building block of any ROS based application. they can contain publishers, subscribers , services and clients.
 
 Initialising a node: 
-> rospy.init_node(‘node_name’, anonymous=True)
+> rospy.init_node(‘node_name’, anonymous=True)<br>
 
 *anonymous command creates a randomised name for the node to keep its name  unique.
 ### Publisher: 
 A publisher publishes the required data on a rostopic.
 
 Initialising a publisher: 
-> publisher = rospy.Publisher(‘topic_name’, data_type, queue_size=10).
+> publisher = rospy.Publisher(‘topic_name’, data_type, queue_size=10).<br>
 
 
 Publishing data using a publisher:
-> publisher.publish(message)
+> publisher.publish(message)<br>
 
 Data can be published at a particular rate using the rate function in rospy as follows:
-> Rate = rospy.rate(Hz)
-> Rate.sleep()     //Creates a delay of desired time in the loop.
+> Rate = rospy.rate(Hz)<br>
+> Rate.sleep()     //Creates a delay of desired time in the loop.<br>
 
 ### Subscriber: 
 It subscribes to a particular topic and receives the data (Messages) published on it.
@@ -73,9 +73,9 @@ A message can be published on a running topic without the need of initialising t
 > rostopic pub -r rate /topic_name  message/type message
 
 The publishing of data through a messages depends on the parameters accepted by it.
-Eg: A String message can only transfer string data type.
-> Message = String()
-> Message.data = ‘It’s a string.’
+Eg: A String message can only transfer string data type.<br>
+> Message = String() <br>
+> Message.data = ‘It’s a string.’<br>
 
 For creating a message data type, an object of the required datatype has to be instantiated.
 ## Service:
@@ -98,8 +98,8 @@ A client transmits data/request to the server and waits until it gets a response
 Hence the services in ROS are used for quick communication purposes, as it suspends the client activity until it gets a response from the server.
 
 Initialisation:
-> client_name = rospy.ServiceProxy("/",Service_Type)
-> response = Service_Name (requested_data)
+> client_name = rospy.ServiceProxy("/",Service_Type) <br>
+> response = Service_Name (requested_data) <br>
 
 ## Log:
 Logging functionality can be used to print/log a message/command on the running terminal.
@@ -112,9 +112,9 @@ Custom message definitions can be created in ROS in the .msg format.
 
 Example:
 
-> float64 temprature
-> bool motor_status
-> string debug_msg
+> float64 temprature <br>
+> bool motor_status <br>
+> string debug_msg <br>
 
 
 The message parameters can be set using the variable names specified in the .msg file.
@@ -128,40 +128,40 @@ Changes to be made in CMakeLists.txt:
 
 1: Adding message generation in find_package
 
-> find_package(catkin REQUIRED COMPONENTS
->   roscpp
->   rospy
->   std_msgs
->   message_generation     # Adding message generation in find_package
-> )
+> find_package(catkin REQUIRED COMPONENTS <br>
+>   roscpp<br>
+>   rospy<br>
+>   std_msgs<br>
+>   message_generation     # Adding message generation in find_package<br>
+> )<br>
 
 2. Adding message file name in add_message_file (The message file should be in msg folder of the package)
 
-> add_message_files(
->   FILES
->   HardwareStatus.msg  # Adding message file name in add_message_file
+> add_message_files(<br>
+>   FILES<br>
+>   HardwareStatus.msg  # Adding message file name in add_message_file<br>
 > )
 
 3. Uncommenting generate_messages 
 
-> generate_messages(
->   DEPENDENCIES
->   std_msgs
+> generate_messages(<br>
+>   DEPENDENCIES<br>
+>   std_msgs <br>
 > )
 
 4. Adding message_runtime to catkin_depend
 
-> catkin_package(
->   #INCLUDE_DIRS include
->   #LIBRARIES Robot_Messages
->   CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
->   #DEPENDS system_lib
-> )
+> catkin_package(<br>
+>   #INCLUDE_DIRS include<br>
+>   #LIBRARIES Robot_Messages<br>
+>   CATKIN_DEPENDS roscpp rospy std_msgs message_runtime<br>
+>   #DEPENDS system_lib<br>
+> )<br>
 
 
 ### Changes to be made in Package.xml:
 
 1. Adding message_generation and message_runtime:
 
-> <build_depend>message_generation</build_depend>
-> <exec_depend>message_runtime</exec_depend>
+> <build_depend>message_generation</build_depend> <br>
+> <exec_depend>message_runtime</exec_depend> <br>
