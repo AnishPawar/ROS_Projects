@@ -165,3 +165,70 @@ Changes to be made in CMakeLists.txt:
 
 > <build_depend>message_generation</build_depend> <br>
 > <exec_depend>message_runtime</exec_depend> <br>
+
+## Custom Service File:
+Custom service files definitions can be created in ROS in the .srv format.
+*The message file has to be created in the srv folder of a package.
+
+Example:
+float64 temprature
+---
+string debug_msg
+
+The datatype declared above the ‘---’ is the input data the service is expecting and the datatype declared below ‘---’ is the output data of the service.
+
+Custom Service Compilation:
+
+### Changes to be made in CMakeLists.txt:
+1. Adding srv file name in add_service_file:
+
+> add_service_files( <br>
+>    FILES<br>
+>    CircleArea.srv	# Adding srv file name in add_service_file<br>
+>    BatterySrv.srv	<br>
+>  )
+
+
+## ROS Parameters:<br>
+ROS Parameters are the global variables in a ROS Environment, i.e. they are accessible by all the nodes.
+
+To access a parameter inside a node: <br>
+> Variable_name = rospy.get_param(“parameter_name”)
+
+Note: Launching the node without setting the parameter prior will lead to an error, as it needs to be set before accessing it.
+
+To initialise a new parameter using a node:<br>
+> rospy.set_param(“parameter_name”,data)
+
+
+Command line tools can be used to access parameters.<br>
+Resource: http://wiki.ros.org/rosparam
+
+## Launch File:
+A launch file is used to launch all the services and nodes specified in it.
+Advantage: The user doesn’t have to run all the nodes, services and parameters one by one.
+
+*Launchfile folders are also called as bringup folders.
+
+Launch files are written in xml format.
+
+Creating a launch file :
+
+> <launch><br>
+> 	<param name = “parameter_name” type = “data_type” value=”value”/>
+> 	<node name = “node_name” pkg=”package_name” type = “node_name.py”/>
+> </launch><br>
+
+Running a launch file: 
+> roslaunch launch_package_name launch_file_name.launch
+
+## ROS Bag:
+Ros bag is used to record data of an event and play it in the same order.
+
+Recording an event:
+
+> rosbag record topic_name
+
+Playback an event:
+
+> rosbag info file_name.bag
