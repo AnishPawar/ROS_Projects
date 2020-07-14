@@ -170,10 +170,10 @@ Changes to be made in CMakeLists.txt:
 Custom service files definitions can be created in ROS in the .srv format.
 *The message file has to be created in the srv folder of a package.
 
-Example:
-float64 temprature
----
-string debug_msg
+Example: <br>
+> float64 temprature
+> ---
+> string debug_msg
 
 The datatype declared above the ‘---’ is the input data the service is expecting and the datatype declared below ‘---’ is the output data of the service.
 
@@ -214,10 +214,10 @@ Launch files are written in xml format.
 
 Creating a launch file :
 
-> <launch><br>
-> 	<param name = “parameter_name” type = “data_type” value=”value”/>
-> 	<node name = “node_name” pkg=”package_name” type = “node_name.py”/>
-> </launch><br>
+<launch><br>
+	<param name = “parameter_name” type = “data_type” value=”value”/>
+	<node name = “node_name” pkg=”package_name” type = “node_name.py”/>
+</launch><br>
 
 Running a launch file: 
 > roslaunch launch_package_name launch_file_name.launch
