@@ -259,10 +259,10 @@ ROS Messages require images in bgr8 format, hence CvBridge is used for this conv
 
 Converting cv image to ros image:
 
-ros_image = CvBridge().cv2_to_imgmsg(image,’bgr8’)
+> ros_image = CvBridge().cv2_to_imgmsg(image,’bgr8’)
 
 After the conversion, the ros_image can be published using Image message from sensor_msg library.
 
 Converting ros image to cv image:
 
-cv_image = CvBridge().imgmsg_to_cv2(Ros_Image,'bgr8')
+> cv_image = CvBridge().imgmsg_to_cv2(Ros_Image,'bgr8')
