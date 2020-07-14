@@ -172,7 +172,7 @@ Custom service files definitions can be created in ROS in the .srv format.
 
 Example: <br>
 > float64 temprature
-> ---
+> '---'
 > string debug_msg
 
 The datatype declared above the ‘---’ is the input data the service is expecting and the datatype declared below ‘---’ is the output data of the service.
