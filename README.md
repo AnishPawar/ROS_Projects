@@ -244,8 +244,8 @@ sudo apt-get install libfontconfig1-dev libdbus-1-dev libfreetype6-dev libudev-d
 #### 2. Install OpenCV CMake version,
 	Resource: https://docs.opencv.org/trunk/d7/d9f/tutorial_linux_install.html
 #### 3. CvBridge install:
-	sudo apt-get install ros-(ROS version name)-cv-bridge <br>
-	sudo apt-get install ros-(ROS version name)-vision-opencv <br>
+	sudo apt-get install ros-(ROS version name)-cv-bridge 
+	sudo apt-get install ros-(ROS version name)-vision-opencv 
 #### 4. Usage:
 	from cv_bridge import CvBridge,CvBridgeError
 
