@@ -214,10 +214,10 @@ Launch files are written in xml format.
 
 Creating a launch file :
 
-<launch><br>
+<launch>
 	<param name = “parameter_name” type = “data_type” value=”value”/>
 	<node name = “node_name” pkg=”package_name” type = “node_name.py”/>
-</launch><br>
+</launch>
 
 Running a launch file: 
 > roslaunch launch_package_name launch_file_name.launch
