@@ -12,10 +12,7 @@ bridge = CvBridge()
 cap = cv2.VideoCapture(0)
 def publisher():
     global bridge,cv_img
-    # np_img = np.reshape(cv_img,(200,200,1))
 
-    # cv_img = cv2.imread('/home/anishpawar/Git/ROS_Projects/catkin_ws/src/opencv_learning/scripts/Barca1.jpg')
-    # cv2.imshow('ss',cv_img)
     rospy.init_node('Image_Publisher')
     
     pub = rospy.Publisher('/image',Image,queue_size=10)

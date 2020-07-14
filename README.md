@@ -214,10 +214,10 @@ Launch files are written in xml format.
 
 Creating a launch file :
 
-<launch>
+"<launch>
 	<param name = “parameter_name” type = “data_type” value=”value”/>
 	<node name = “node_name” pkg=”package_name” type = “node_name.py”/>
-</launch>
+</launch>"
 
 Running a launch file: 
 > roslaunch launch_package_name launch_file_name.launch
@@ -232,3 +232,37 @@ Recording an event:
 Playback an event:
 
 > rosbag info file_name.bag
+
+## ROS OpenCV:
+For exchanging image(OpenCV) messages within ROS environment, CvBridge is used for the conversion process.
+
+### Installation:
+
+#### 1. Dependencies : 
+sudo apt-get install libfontconfig1-dev libdbus-1-dev libfreetype6-dev libudev-dev libicu-dev libsqlite3-dev libxslt1-dev libssl-dev libasound2-dev libavcodec-dev libavformat-dev libswscale-dev libgles2-mesa-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler libopenblas-dev liblapack-dev libopenblas-dev liblapack-dev libgflags-dev libgoogle-glog-dev liblmdb-dev cmake cmake-gui gfortran liblapack-dev libblas-dev libatlas-base-dev libarpack2-dev libarpack++2-dev
+
+#### 2. Install OpenCV CMake version,
+	Resource: https://docs.opencv.org/trunk/d7/d9f/tutorial_linux_install.html
+#### 3. CvBridge install:
+	sudo apt-get install ros-(ROS version name)-cv-bridge <br>
+	sudo apt-get install ros-(ROS version name)-vision-opencv <br>
+#### 4. Usage:
+	from cv_bridge import CvBridge,CvBridgeError
+
+
+### Image Conversion:
+OpenCV stores image in numpy arrays (8bit format).<br>
+
+ROS Messages require images in bgr8 format, hence CvBridge is used for this conversion process.
+
+
+
+Converting cv image to ros image:
+
+ros_image = CvBridge().cv2_to_imgmsg(image,’bgr8’)
+
+After the conversion, the ros_image can be published using Image message from sensor_msg library.
+
+Converting ros image to cv image:
+
+cv_image = CvBridge().imgmsg_to_cv2(Ros_Image,'bgr8')
