@@ -171,9 +171,9 @@ Custom service files definitions can be created in ROS in the .srv format.
 *The message file has to be created in the srv folder of a package.
 
 Example: <br>
-> float64 temprature
-> '---'
-> string debug_msg
+> float64 temprature<br>
+> '---'<br>
+> string debug_msg<br>
 
 The datatype declared above the ‘---’ is the input data the service is expecting and the datatype declared below ‘---’ is the output data of the service.
 
