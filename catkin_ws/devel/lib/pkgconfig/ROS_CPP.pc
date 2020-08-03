@@ -1,8 +1,0 @@
-prefix=/home/anishpawar/Git/ROS_Projects/catkin_ws/devel
-
-Name: ROS_CPP
-Description: Description of ROS_CPP
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
