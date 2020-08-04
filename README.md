@@ -266,3 +266,10 @@ After the conversion, the ros_image can be published using Image message from se
 Converting ros image to cv image:
 
 > cv_image = CvBridge().imgmsg_to_cv2(Ros_Image,'bgr8')
+
+#### Opening image Messages through ROS Terminal
+	To open/display an image published on a topic through terminal:
+	`rosrun image_view image_view image:=/topic_name`
+#### Getting camera live feed thorough webcam using a ros node
+	TO access live webcam feed through rosnode:
+	`rosrun usb_cam usb_cam_node _pixel_format:yuyv`
