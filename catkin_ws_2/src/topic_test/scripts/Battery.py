@@ -13,7 +13,7 @@ discharging_rate = rospy.Rate(0.3)
 try:
     battery_service = rospy.ServiceProxy('/battery_percentage',BatterySrv)
 
-    if Charge == 0:22
+    if Charge == 0
         while Charge <= 100:
             Charge +=25 
             feedback = battery_service(Charge)

@@ -45,6 +45,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Robot_Messages/srv" TYPE FILE FILES
     "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv"
     "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/BatterySrv.srv"
+    "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv"
     )
 endif()
 

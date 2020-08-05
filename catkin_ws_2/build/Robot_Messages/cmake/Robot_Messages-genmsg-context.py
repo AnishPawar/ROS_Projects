@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg/HardwareStatus.msg"
-services_str = "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv;/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/BatterySrv.srv"
+services_str = "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv;/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/BatterySrv.srv;/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv"
 pkg_name = "Robot_Messages"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

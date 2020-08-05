@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "Robot_Messages: 1 messages, 2 services")
+message(STATUS "Robot_Messages: 1 messages, 3 services")
 
 set(MSG_I_FLAGS "-IRobot_Messages:/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
@@ -20,6 +20,11 @@ add_custom_target(Robot_Messages_generate_messages ALL)
 get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg/HardwareStatus.msg" NAME_WE)
 add_custom_target(_Robot_Messages_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "Robot_Messages" "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg/HardwareStatus.msg" ""
+)
+
+get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv" NAME_WE)
+add_custom_target(_Robot_Messages_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "Robot_Messages" "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv" ""
 )
 
 get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv" NAME_WE)
@@ -53,6 +58,12 @@ _generate_srv_cpp(Robot_Messages
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/Robot_Messages
 )
 _generate_srv_cpp(Robot_Messages
+  "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/Robot_Messages
+)
+_generate_srv_cpp(Robot_Messages
   "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -72,6 +83,8 @@ add_dependencies(Robot_Messages_generate_messages Robot_Messages_generate_messag
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg/HardwareStatus.msg" NAME_WE)
+add_dependencies(Robot_Messages_generate_messages_cpp _Robot_Messages_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv" NAME_WE)
 add_dependencies(Robot_Messages_generate_messages_cpp _Robot_Messages_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv" NAME_WE)
 add_dependencies(Robot_Messages_generate_messages_cpp _Robot_Messages_generate_messages_check_deps_${_filename})
@@ -102,6 +115,12 @@ _generate_srv_eus(Robot_Messages
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/Robot_Messages
 )
 _generate_srv_eus(Robot_Messages
+  "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/Robot_Messages
+)
+_generate_srv_eus(Robot_Messages
   "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -121,6 +140,8 @@ add_dependencies(Robot_Messages_generate_messages Robot_Messages_generate_messag
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg/HardwareStatus.msg" NAME_WE)
+add_dependencies(Robot_Messages_generate_messages_eus _Robot_Messages_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv" NAME_WE)
 add_dependencies(Robot_Messages_generate_messages_eus _Robot_Messages_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv" NAME_WE)
 add_dependencies(Robot_Messages_generate_messages_eus _Robot_Messages_generate_messages_check_deps_${_filename})
@@ -151,6 +172,12 @@ _generate_srv_lisp(Robot_Messages
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/Robot_Messages
 )
 _generate_srv_lisp(Robot_Messages
+  "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/Robot_Messages
+)
+_generate_srv_lisp(Robot_Messages
   "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -170,6 +197,8 @@ add_dependencies(Robot_Messages_generate_messages Robot_Messages_generate_messag
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg/HardwareStatus.msg" NAME_WE)
+add_dependencies(Robot_Messages_generate_messages_lisp _Robot_Messages_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv" NAME_WE)
 add_dependencies(Robot_Messages_generate_messages_lisp _Robot_Messages_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv" NAME_WE)
 add_dependencies(Robot_Messages_generate_messages_lisp _Robot_Messages_generate_messages_check_deps_${_filename})
@@ -200,6 +229,12 @@ _generate_srv_nodejs(Robot_Messages
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/Robot_Messages
 )
 _generate_srv_nodejs(Robot_Messages
+  "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/Robot_Messages
+)
+_generate_srv_nodejs(Robot_Messages
   "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -219,6 +254,8 @@ add_dependencies(Robot_Messages_generate_messages Robot_Messages_generate_messag
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg/HardwareStatus.msg" NAME_WE)
+add_dependencies(Robot_Messages_generate_messages_nodejs _Robot_Messages_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv" NAME_WE)
 add_dependencies(Robot_Messages_generate_messages_nodejs _Robot_Messages_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv" NAME_WE)
 add_dependencies(Robot_Messages_generate_messages_nodejs _Robot_Messages_generate_messages_check_deps_${_filename})
@@ -249,6 +286,12 @@ _generate_srv_py(Robot_Messages
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/Robot_Messages
 )
 _generate_srv_py(Robot_Messages
+  "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/Robot_Messages
+)
+_generate_srv_py(Robot_Messages
   "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -268,6 +311,8 @@ add_dependencies(Robot_Messages_generate_messages Robot_Messages_generate_messag
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg/HardwareStatus.msg" NAME_WE)
+add_dependencies(Robot_Messages_generate_messages_py _Robot_Messages_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv" NAME_WE)
 add_dependencies(Robot_Messages_generate_messages_py _Robot_Messages_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv" NAME_WE)
 add_dependencies(Robot_Messages_generate_messages_py _Robot_Messages_generate_messages_check_deps_${_filename})

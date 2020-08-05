@@ -58,6 +58,7 @@ find_package(catkin REQUIRED COMPONENTS
    FILES
    CircleArea.srv
    BatterySrv.srv
+   TestSrv.srv
  )
 
 ## Generate actions in the 'action' folder

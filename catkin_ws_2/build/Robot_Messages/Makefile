@@ -91,6 +91,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -123,17 +134,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,34 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/rule:
-	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/rule
-.PHONY : Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/rule
+Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/rule:
+	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/rule
+.PHONY : Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-Robot_Messages_gencpp: Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/rule
+Robot_Messages_generate_messages_cpp: Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/rule
 
-.PHONY : Robot_Messages_gencpp
+.PHONY : Robot_Messages_generate_messages_cpp
 
 # fast build rule for target.
-Robot_Messages_gencpp/fast:
-	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/build
-.PHONY : Robot_Messages_gencpp/fast
-
-# Convenience name for target.
-Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/rule:
-	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/rule
-.PHONY : Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/rule
-
-# Convenience name for target.
-Robot_Messages_genpy: Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/rule
-
-.PHONY : Robot_Messages_genpy
-
-# fast build rule for target.
-Robot_Messages_genpy/fast:
-	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/build
-.PHONY : Robot_Messages_genpy/fast
+Robot_Messages_generate_messages_cpp/fast:
+	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/build
+.PHONY : Robot_Messages_generate_messages_cpp/fast
 
 # Convenience name for target.
 Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_BatterySrv.dir/rule:
@@ -228,19 +213,34 @@ _Robot_Messages_generate_messages_check_deps_CircleArea/fast:
 .PHONY : _Robot_Messages_generate_messages_check_deps_CircleArea/fast
 
 # Convenience name for target.
-Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/rule:
-	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/rule
-.PHONY : Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/rule
+Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/rule:
+	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/rule
+.PHONY : Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/rule
 
 # Convenience name for target.
-_Robot_Messages_generate_messages_check_deps_HardwareStatus: Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/rule
+Robot_Messages_gennodejs: Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/rule
 
-.PHONY : _Robot_Messages_generate_messages_check_deps_HardwareStatus
+.PHONY : Robot_Messages_gennodejs
 
 # fast build rule for target.
-_Robot_Messages_generate_messages_check_deps_HardwareStatus/fast:
-	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/build.make Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/build
-.PHONY : _Robot_Messages_generate_messages_check_deps_HardwareStatus/fast
+Robot_Messages_gennodejs/fast:
+	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/build
+.PHONY : Robot_Messages_gennodejs/fast
+
+# Convenience name for target.
+Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_TestSrv.dir/rule:
+	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_TestSrv.dir/rule
+.PHONY : Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_TestSrv.dir/rule
+
+# Convenience name for target.
+_Robot_Messages_generate_messages_check_deps_TestSrv: Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_TestSrv.dir/rule
+
+.PHONY : _Robot_Messages_generate_messages_check_deps_TestSrv
+
+# fast build rule for target.
+_Robot_Messages_generate_messages_check_deps_TestSrv/fast:
+	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_TestSrv.dir/build.make Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_TestSrv.dir/build
+.PHONY : _Robot_Messages_generate_messages_check_deps_TestSrv/fast
 
 # Convenience name for target.
 Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_eus.dir/rule:
@@ -258,19 +258,49 @@ Robot_Messages_generate_messages_eus/fast:
 .PHONY : Robot_Messages_generate_messages_eus/fast
 
 # Convenience name for target.
-Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/rule:
-	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/rule
-.PHONY : Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/rule
+Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/rule:
+	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/rule
+.PHONY : Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/rule
 
 # Convenience name for target.
-Robot_Messages_gennodejs: Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/rule
+_Robot_Messages_generate_messages_check_deps_HardwareStatus: Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/rule
 
-.PHONY : Robot_Messages_gennodejs
+.PHONY : _Robot_Messages_generate_messages_check_deps_HardwareStatus
 
 # fast build rule for target.
-Robot_Messages_gennodejs/fast:
-	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/build
-.PHONY : Robot_Messages_gennodejs/fast
+_Robot_Messages_generate_messages_check_deps_HardwareStatus/fast:
+	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/build.make Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/build
+.PHONY : _Robot_Messages_generate_messages_check_deps_HardwareStatus/fast
+
+# Convenience name for target.
+Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/rule:
+	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/rule
+.PHONY : Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/rule
+
+# Convenience name for target.
+Robot_Messages_gencpp: Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/rule
+
+.PHONY : Robot_Messages_gencpp
+
+# fast build rule for target.
+Robot_Messages_gencpp/fast:
+	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/build
+.PHONY : Robot_Messages_gencpp/fast
+
+# Convenience name for target.
+Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/rule:
+	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/rule
+.PHONY : Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/rule
+
+# Convenience name for target.
+Robot_Messages_genpy: Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/rule
+
+.PHONY : Robot_Messages_genpy
+
+# fast build rule for target.
+Robot_Messages_genpy/fast:
+	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/build
+.PHONY : Robot_Messages_genpy/fast
 
 # Convenience name for target.
 Robot_Messages/CMakeFiles/Robot_Messages_generate_messages.dir/rule:
@@ -362,21 +392,6 @@ Robot_Messages_generate_messages_py/fast:
 	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_py.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_py.dir/build
 .PHONY : Robot_Messages_generate_messages_py/fast
 
-# Convenience name for target.
-Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/rule:
-	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/rule
-.PHONY : Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-Robot_Messages_generate_messages_cpp: Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/rule
-
-.PHONY : Robot_Messages_generate_messages_cpp
-
-# fast build rule for target.
-Robot_Messages_generate_messages_cpp/fast:
-	cd /home/anish/git/ROS_Projects/catkin_ws_2/build && $(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/build
-.PHONY : Robot_Messages_generate_messages_cpp/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -386,14 +401,17 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... Robot_Messages_generate_messages_cpp"
+	@echo "... _Robot_Messages_generate_messages_check_deps_BatterySrv"
+	@echo "... _Robot_Messages_generate_messages_check_deps_CircleArea"
+	@echo "... Robot_Messages_gennodejs"
+	@echo "... _Robot_Messages_generate_messages_check_deps_TestSrv"
+	@echo "... Robot_Messages_generate_messages_eus"
+	@echo "... _Robot_Messages_generate_messages_check_deps_HardwareStatus"
 	@echo "... list_install_components"
 	@echo "... Robot_Messages_gencpp"
 	@echo "... Robot_Messages_genpy"
-	@echo "... _Robot_Messages_generate_messages_check_deps_BatterySrv"
-	@echo "... _Robot_Messages_generate_messages_check_deps_CircleArea"
-	@echo "... _Robot_Messages_generate_messages_check_deps_HardwareStatus"
-	@echo "... Robot_Messages_generate_messages_eus"
-	@echo "... Robot_Messages_gennodejs"
 	@echo "... install"
 	@echo "... Robot_Messages_generate_messages"
 	@echo "... Robot_Messages_geneus"
@@ -402,8 +420,6 @@ help:
 	@echo "... Robot_Messages_genlisp"
 	@echo "... test"
 	@echo "... Robot_Messages_generate_messages_py"
-	@echo "... Robot_Messages_generate_messages_cpp"
-	@echo "... edit_cache"
 .PHONY : help
 
 

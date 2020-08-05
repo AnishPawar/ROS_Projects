@@ -55,6 +55,7 @@ include Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_eus.dir/progr
 
 Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_eus: /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/msg/HardwareStatus.l
 Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_eus: /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/srv/BatterySrv.l
+Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_eus: /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/srv/TestSrv.l
 Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_eus: /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/srv/CircleArea.l
 Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_eus: /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/manifest.l
 
@@ -69,18 +70,24 @@ Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_eus: /home/anish/git/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anish/git/ROS_Projects/catkin_ws_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from Robot_Messages/BatterySrv.srv"
 	cd /home/anish/git/ROS_Projects/catkin_ws_2/build/Robot_Messages && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/BatterySrv.srv -IRobot_Messages:/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p Robot_Messages -o /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/srv
 
+/home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/srv/TestSrv.l: /opt/ros/melodic/lib/geneus/gen_eus.py
+/home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/srv/TestSrv.l: /home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anish/git/ROS_Projects/catkin_ws_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from Robot_Messages/TestSrv.srv"
+	cd /home/anish/git/ROS_Projects/catkin_ws_2/build/Robot_Messages && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv -IRobot_Messages:/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p Robot_Messages -o /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/srv
+
 /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/srv/CircleArea.l: /opt/ros/melodic/lib/geneus/gen_eus.py
 /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/srv/CircleArea.l: /home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anish/git/ROS_Projects/catkin_ws_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from Robot_Messages/CircleArea.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anish/git/ROS_Projects/catkin_ws_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from Robot_Messages/CircleArea.srv"
 	cd /home/anish/git/ROS_Projects/catkin_ws_2/build/Robot_Messages && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv -IRobot_Messages:/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p Robot_Messages -o /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/srv
 
 /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/manifest.l: /opt/ros/melodic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anish/git/ROS_Projects/catkin_ws_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp manifest code for Robot_Messages"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anish/git/ROS_Projects/catkin_ws_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp manifest code for Robot_Messages"
 	cd /home/anish/git/ROS_Projects/catkin_ws_2/build/Robot_Messages && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages Robot_Messages std_msgs
 
 Robot_Messages_generate_messages_eus: Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_eus
 Robot_Messages_generate_messages_eus: /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/msg/HardwareStatus.l
 Robot_Messages_generate_messages_eus: /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/srv/BatterySrv.l
+Robot_Messages_generate_messages_eus: /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/srv/TestSrv.l
 Robot_Messages_generate_messages_eus: /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/srv/CircleArea.l
 Robot_Messages_generate_messages_eus: /home/anish/git/ROS_Projects/catkin_ws_2/devel/share/roseus/ros/Robot_Messages/manifest.l
 Robot_Messages_generate_messages_eus: Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_eus.dir/build.make

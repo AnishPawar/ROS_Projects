@@ -519,30 +519,17 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named Robot_Messages_gencpp
+# Target rules for targets named Robot_Messages_generate_messages_cpp
 
 # Build rule for target.
-Robot_Messages_gencpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Robot_Messages_gencpp
-.PHONY : Robot_Messages_gencpp
+Robot_Messages_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Robot_Messages_generate_messages_cpp
+.PHONY : Robot_Messages_generate_messages_cpp
 
 # fast build rule for target.
-Robot_Messages_gencpp/fast:
-	$(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/build
-.PHONY : Robot_Messages_gencpp/fast
-
-#=============================================================================
-# Target rules for targets named Robot_Messages_genpy
-
-# Build rule for target.
-Robot_Messages_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Robot_Messages_genpy
-.PHONY : Robot_Messages_genpy
-
-# fast build rule for target.
-Robot_Messages_genpy/fast:
-	$(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/build
-.PHONY : Robot_Messages_genpy/fast
+Robot_Messages_generate_messages_cpp/fast:
+	$(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/build
+.PHONY : Robot_Messages_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named _Robot_Messages_generate_messages_check_deps_BatterySrv
@@ -571,17 +558,30 @@ _Robot_Messages_generate_messages_check_deps_CircleArea/fast:
 .PHONY : _Robot_Messages_generate_messages_check_deps_CircleArea/fast
 
 #=============================================================================
-# Target rules for targets named _Robot_Messages_generate_messages_check_deps_HardwareStatus
+# Target rules for targets named Robot_Messages_gennodejs
 
 # Build rule for target.
-_Robot_Messages_generate_messages_check_deps_HardwareStatus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _Robot_Messages_generate_messages_check_deps_HardwareStatus
-.PHONY : _Robot_Messages_generate_messages_check_deps_HardwareStatus
+Robot_Messages_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Robot_Messages_gennodejs
+.PHONY : Robot_Messages_gennodejs
 
 # fast build rule for target.
-_Robot_Messages_generate_messages_check_deps_HardwareStatus/fast:
-	$(MAKE) -f Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/build.make Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/build
-.PHONY : _Robot_Messages_generate_messages_check_deps_HardwareStatus/fast
+Robot_Messages_gennodejs/fast:
+	$(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/build
+.PHONY : Robot_Messages_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named _Robot_Messages_generate_messages_check_deps_TestSrv
+
+# Build rule for target.
+_Robot_Messages_generate_messages_check_deps_TestSrv: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _Robot_Messages_generate_messages_check_deps_TestSrv
+.PHONY : _Robot_Messages_generate_messages_check_deps_TestSrv
+
+# fast build rule for target.
+_Robot_Messages_generate_messages_check_deps_TestSrv/fast:
+	$(MAKE) -f Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_TestSrv.dir/build.make Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_TestSrv.dir/build
+.PHONY : _Robot_Messages_generate_messages_check_deps_TestSrv/fast
 
 #=============================================================================
 # Target rules for targets named Robot_Messages_generate_messages_eus
@@ -597,17 +597,43 @@ Robot_Messages_generate_messages_eus/fast:
 .PHONY : Robot_Messages_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named Robot_Messages_gennodejs
+# Target rules for targets named _Robot_Messages_generate_messages_check_deps_HardwareStatus
 
 # Build rule for target.
-Robot_Messages_gennodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Robot_Messages_gennodejs
-.PHONY : Robot_Messages_gennodejs
+_Robot_Messages_generate_messages_check_deps_HardwareStatus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _Robot_Messages_generate_messages_check_deps_HardwareStatus
+.PHONY : _Robot_Messages_generate_messages_check_deps_HardwareStatus
 
 # fast build rule for target.
-Robot_Messages_gennodejs/fast:
-	$(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_gennodejs.dir/build
-.PHONY : Robot_Messages_gennodejs/fast
+_Robot_Messages_generate_messages_check_deps_HardwareStatus/fast:
+	$(MAKE) -f Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/build.make Robot_Messages/CMakeFiles/_Robot_Messages_generate_messages_check_deps_HardwareStatus.dir/build
+.PHONY : _Robot_Messages_generate_messages_check_deps_HardwareStatus/fast
+
+#=============================================================================
+# Target rules for targets named Robot_Messages_gencpp
+
+# Build rule for target.
+Robot_Messages_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Robot_Messages_gencpp
+.PHONY : Robot_Messages_gencpp
+
+# fast build rule for target.
+Robot_Messages_gencpp/fast:
+	$(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_gencpp.dir/build
+.PHONY : Robot_Messages_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named Robot_Messages_genpy
+
+# Build rule for target.
+Robot_Messages_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Robot_Messages_genpy
+.PHONY : Robot_Messages_genpy
+
+# fast build rule for target.
+Robot_Messages_genpy/fast:
+	$(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_genpy.dir/build
+.PHONY : Robot_Messages_genpy/fast
 
 #=============================================================================
 # Target rules for targets named Robot_Messages_generate_messages
@@ -686,19 +712,6 @@ Robot_Messages_generate_messages_py: cmake_check_build_system
 Robot_Messages_generate_messages_py/fast:
 	$(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_py.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_py.dir/build
 .PHONY : Robot_Messages_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named Robot_Messages_generate_messages_cpp
-
-# Build rule for target.
-Robot_Messages_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Robot_Messages_generate_messages_cpp
-.PHONY : Robot_Messages_generate_messages_cpp
-
-# fast build rule for target.
-Robot_Messages_generate_messages_cpp/fast:
-	$(MAKE) -f Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/build.make Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_cpp.dir/build
-.PHONY : Robot_Messages_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named trajectory_msgs_generate_messages_nodejs
@@ -1416,20 +1429,21 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... Robot_Messages_gencpp"
-	@echo "... Robot_Messages_genpy"
+	@echo "... Robot_Messages_generate_messages_cpp"
 	@echo "... _Robot_Messages_generate_messages_check_deps_BatterySrv"
 	@echo "... _Robot_Messages_generate_messages_check_deps_CircleArea"
-	@echo "... _Robot_Messages_generate_messages_check_deps_HardwareStatus"
-	@echo "... Robot_Messages_generate_messages_eus"
 	@echo "... Robot_Messages_gennodejs"
+	@echo "... _Robot_Messages_generate_messages_check_deps_TestSrv"
+	@echo "... Robot_Messages_generate_messages_eus"
+	@echo "... _Robot_Messages_generate_messages_check_deps_HardwareStatus"
+	@echo "... Robot_Messages_gencpp"
+	@echo "... Robot_Messages_genpy"
 	@echo "... Robot_Messages_generate_messages"
 	@echo "... Robot_Messages_geneus"
 	@echo "... Robot_Messages_generate_messages_lisp"
 	@echo "... Robot_Messages_generate_messages_nodejs"
 	@echo "... Robot_Messages_genlisp"
 	@echo "... Robot_Messages_generate_messages_py"
-	@echo "... Robot_Messages_generate_messages_cpp"
 	@echo "... trajectory_msgs_generate_messages_nodejs"
 	@echo "... trajectory_msgs_generate_messages_lisp"
 	@echo "... trajectory_msgs_generate_messages_eus"

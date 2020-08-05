@@ -55,6 +55,7 @@ include Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_py.dir/progre
 
 Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/msg/_HardwareStatus.py
 Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_BatterySrv.py
+Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_TestSrv.py
 Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_CircleArea.py
 Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/msg/__init__.py
 Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/__init__.py
@@ -70,28 +71,36 @@ Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_py: /home/anish/git/R
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anish/git/ROS_Projects/catkin_ws_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV Robot_Messages/BatterySrv"
 	cd /home/anish/git/ROS_Projects/catkin_ws_2/build/Robot_Messages && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/BatterySrv.srv -IRobot_Messages:/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p Robot_Messages -o /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv
 
+/home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_TestSrv.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
+/home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_TestSrv.py: /home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anish/git/ROS_Projects/catkin_ws_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV Robot_Messages/TestSrv"
+	cd /home/anish/git/ROS_Projects/catkin_ws_2/build/Robot_Messages && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/TestSrv.srv -IRobot_Messages:/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p Robot_Messages -o /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv
+
 /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_CircleArea.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
 /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_CircleArea.py: /home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anish/git/ROS_Projects/catkin_ws_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV Robot_Messages/CircleArea"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anish/git/ROS_Projects/catkin_ws_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV Robot_Messages/CircleArea"
 	cd /home/anish/git/ROS_Projects/catkin_ws_2/build/Robot_Messages && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/srv/CircleArea.srv -IRobot_Messages:/home/anish/git/ROS_Projects/catkin_ws_2/src/Robot_Messages/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p Robot_Messages -o /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv
 
 /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/msg/__init__.py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/msg/_HardwareStatus.py
 /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/msg/__init__.py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_BatterySrv.py
+/home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/msg/__init__.py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_TestSrv.py
 /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/msg/__init__.py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_CircleArea.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anish/git/ROS_Projects/catkin_ws_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for Robot_Messages"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anish/git/ROS_Projects/catkin_ws_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for Robot_Messages"
 	cd /home/anish/git/ROS_Projects/catkin_ws_2/build/Robot_Messages && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/msg --initpy
 
 /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/__init__.py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/msg/_HardwareStatus.py
 /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/__init__.py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_BatterySrv.py
+/home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/__init__.py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_TestSrv.py
 /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/__init__.py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_CircleArea.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anish/git/ROS_Projects/catkin_ws_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python srv __init__.py for Robot_Messages"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anish/git/ROS_Projects/catkin_ws_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python srv __init__.py for Robot_Messages"
 	cd /home/anish/git/ROS_Projects/catkin_ws_2/build/Robot_Messages && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv --initpy
 
 Robot_Messages_generate_messages_py: Robot_Messages/CMakeFiles/Robot_Messages_generate_messages_py
 Robot_Messages_generate_messages_py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/msg/_HardwareStatus.py
 Robot_Messages_generate_messages_py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_BatterySrv.py
+Robot_Messages_generate_messages_py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_TestSrv.py
 Robot_Messages_generate_messages_py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/_CircleArea.py
 Robot_Messages_generate_messages_py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/msg/__init__.py
 Robot_Messages_generate_messages_py: /home/anish/git/ROS_Projects/catkin_ws_2/devel/lib/python2.7/dist-packages/Robot_Messages/srv/__init__.py

@@ -21,7 +21,7 @@ def getKey():
     else:
         key = ''
     # Used for draining the previous attributes
-    termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
+    termios.tcsetattr(sys.stdin, termios.TCSADRAIN,termios.tcgetattr(sys.stdin))
     return key
 
 def publisher():
@@ -53,7 +53,7 @@ def publisher():
         rate.sleep()
 
 if __name__ == "__main__":
-    settings = termios.tcgetattr(sys.stdin)
+    
     try:
         publisher()
     except rospy.ROSInterruptException:
