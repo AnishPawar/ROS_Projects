@@ -1,8 +1,0 @@
-prefix=/home/anish/git/ROS_Projects/catkin_ws_2/install
-
-Name: ROS_CPP
-Description: Description of ROS_CPP
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

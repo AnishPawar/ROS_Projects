@@ -1,8 +1,0 @@
-prefix=/home/anish/git/ROS_Projects/catkin_ws_2/devel
-
-Name: topic_test
-Description: Description of topic_test
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

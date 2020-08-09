@@ -1,2 +1,0 @@
-ROS_CPP:Robot_Messages:first_bringup:gazebo_test:opencv_learning:topic_test:turtle_mover
--DCATKIN_DEVEL_PREFIX=/home/anish/git/ROS_Projects/catkin_ws_2/devel -DCMAKE_INSTALL_PREFIX=/home/anish/git/ROS_Projects/catkin_ws_2/install -G Unix Makefiles
