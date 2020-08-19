@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(ROS_CPP)
+project(transform_learning)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -104,7 +104,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES ROS_CPP
+#  LIBRARIES transform_learning
 #  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
@@ -122,7 +122,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/ROS_CPP.cpp
+#   src/${PROJECT_NAME}/transform_learning.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -133,25 +133,8 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/ROS_CPP_node.cpp)
-add_executable(node_cpp src/my_first_node.cpp)
-target_link_libraries(node_cpp ${catkin_LIBRARIES})
-add_executable(first_test_node src/node_test.cpp)
-target_link_libraries(first_test_node ${catkin_LIBRARIES})
-add_executable(first_publisher src/cpp_publisher.cpp)
-target_link_libraries(first_publisher ${catkin_LIBRARIES})
-add_executable(first_subscriber src/cpp_subscriber.cpp)
-target_link_libraries(first_subscriber ${catkin_LIBRARIES})
-add_executable(int_server src/add_two_int_server.cpp)
-target_link_libraries(int_server ${catkin_LIBRARIES})
-add_executable(int_client src/add_two_int_client.cpp)
-target_link_libraries(int_client ${catkin_LIBRARIES})
+# add_executable(${PROJECT_NAME}_node src/transform_learning_node.cpp)
 
-add_executable(sample_publisher src/Publisher_Test.cpp)
-target_link_libraries(sample_publisher ${catkin_LIBRARIES})
-
-add_executable(sample_test src/cpp_test.cpp)
-target_link_libraries(sample_test ${catkin_LIBRARIES})
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -214,7 +197,7 @@ target_link_libraries(sample_test ${catkin_LIBRARIES})
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_ROS_CPP.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_transform_learning.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
