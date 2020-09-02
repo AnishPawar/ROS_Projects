@@ -791,6 +791,7 @@
         </sensor>
       </link>
     </model>
+    
     <joint name='Engine' type='revolute'>
       <parent>link_0</parent>
       <child>link_0_0_clone</child>
