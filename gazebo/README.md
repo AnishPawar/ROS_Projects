@@ -4,7 +4,6 @@
 For basic simulation purposes, use the Gazebo GUI.
 ## Launching Gazebo
 #### Use terminal and input 
-	
 	gazebo
 
 # Gazebo Joints
@@ -38,3 +37,6 @@ All the services containing `/gazebo` prefix can be used for communication betwe
 
 #### Applying Joint efforts using a ROS Service
 	rosservice call /gazebo/ApplyJointEffort
+
+- The `Teleop Car` model in this repository uses the keyboard keys as the input for driving a simulated car in Gazebo.
+- A similar version of `Teleop Car` is controlled using ROS Serial.
