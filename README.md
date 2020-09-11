@@ -267,9 +267,97 @@ Converting ros image to cv image:
 
 > cv_image = CvBridge().imgmsg_to_cv2(Ros_Image,'bgr8')
 
-#### Opening image Messages through ROS Terminal
-	To open/display an image published on a topic through terminal:
-	`rosrun image_view image_view image:=/topic_name`
-#### Getting camera live feed thorough webcam using a ros node
-	TO access live webcam feed through rosnode:
-	`rosrun usb_cam usb_cam_node _pixel_format:yuyv`
+# Ros Serial Arduino
+## Installation
+1. Install Arduino IDE:<br>
+	https://www.arduino.cc/en/guide/linux
+
+2. Follow the steps given in the link below:<br>
+	http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup
+
+## Establishing Serial COM between Arduino and ROS:
+>	rosrun rosserial_arduino serial_node.py _port:=/dev/ttyUSB0
+
+## Nodes and Topics
+Nodes in ROS-Serial are very similar to the nodes in default ros ecosystem
+**Importing Necessary Libraries**
+> #include <ros.h> <br>
+> #include <std_msgs/Float32.h>
+
+**Starting ROS NodeHandle**
+> ros::NodeHandle nh;<br>
+
+**Creating an instance of the message**
+> std_msgs::Float32 laser_msg;
+
+**Initialising a Publisher**
+>ros::Publisher pub("Laser_MSG_Topic",&laser_msg);
+
+**Initialising and Advertising a node**
+>void setup() <br>
+>{	<br>
+>nh.initNode();<br>
+>nh.advertise(pub);<br>
+>}
+
+**Publishing Data values**
+> void loop()<br>
+> { laser_msg.data = 18.0;
+>	pub.publish(&laser_msg);<br>
+>	nh.spinOnce(); //Similar to rospy.spin() <br>
+>	}
+
+## Services 
+ROS Serial doesn't work when using the Arduino as a server.
+This issue is specific to ROS Melodic.
+
+Eg: A server used for calling /ApplyJointEffort service of agzebo
+
+**Importing Necessary Libraries**
+>#include<ros.h> <br>
+>#include<gazebo_msgs/ApplyJointEffort.h>
+
+**Starting ROS NodeHandle**
+> ros::NodeHandle nh;<br>
+
+**Creating an instance of the message**
+> std_msgs::Float32 laser_msg;
+
+**Initialising a the Service**
+>ros::ServiceClient<gazebo_msgs::ApplyJointEffort::Request,gazebo_msgs::ApplyJointEffort::Response>client("/gazebo/apply_joint_effort");
+
+**Initialising and Advertising the publisher**
+>void setup() <br>
+>{	<br>
+>nh.initNode();<br>
+>nh.serviceClient(client);<br>
+>}
+
+**Creating and Publishing Service Request and Accepting Response**
+void loop() {<br>
+>//Defining Requests and Responses  <br>
+>gazebo_msgs::ApplyJointEffort::Request req;<br>
+>gazebo_msgs::ApplyJointEffort::Response res;<br>
+>
+> //Sending a request with specified arguments<br>
+>req.joint_name = "Engine";<br>
+>req.effort = 10.0;<br>
+>req.start_time = nh.now();<br>
+>req.duration = ros::Duration(1,1);<br>
+>client.call(req,res);<br>
+>
+>nh.spinOnce();<br>
+>}                 
+
+### Array messages Exception (ROS-Serial Specific)
+While sending array messages in ROS-Serial, the length of the array must be predefined within the message param.
+ 
+Eg: Publishing ranges in Laser Scan Messages
+> //Defining The Array <br>
+>float distance_values[100]<br>
+>
+>//Defining the length of array in scan message
+>distance_ultra.ranges_length = 18; <br>
+>
+> //Assigning the array as a message param
+>distance_ultra.ranges = distance_values;
